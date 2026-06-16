@@ -62,3 +62,9 @@ img{max-width:100%;display:block}
 .cs-next{padding:56px 24px 0;font-size:1.15rem}
 .cs-next a{font-weight:800;text-decoration:none}
 .cs-next a:hover{color:var(--accent)}
+
+/* simple page (about) */
+.page{padding:64px 24px;max-width:62ch}
+.page h1{font-size:clamp(2.2rem,6vw,3.4rem);margin-bottom:.5em}
+.page p{color:#222;font-size:1.1rem}
+.page a{text-decoration:underline;text-underline-offset:3px}
