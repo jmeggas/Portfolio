@@ -162,7 +162,8 @@ simple expander or as a final section, if completeness is wanted.
 - **Object Sans** (`.woff2`) placed under `static/fonts/` (or `assets/fonts/`),
   declared with `@font-face`, with `font-display: swap` and a system-sans
   fallback stack.
-- Source the weights actually used (at minimum Regular + a Bold/Heavy).
+- Use the **free PangramPangram release** of Object Sans (sourced during build),
+  including at minimum Regular + Heavy (body + headings).
 - Confirm the license permits web embedding before deploy.
 
 ## Open items to confirm during build
