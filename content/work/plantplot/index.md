@@ -16,13 +16,13 @@ sections:
     body: "Part garden planner, part living archive — plantplot lets you map your landscape, organize your plants, and document the seasons as your garden changes over time. Track what thrives, what returns, and the stories rooted in every corner of your space."
   - heading: "The mark"
     body: "A garden plot pin: a geometric flower fused with a location marker. The four circles are the four seasons, the diamond at the center is the north star, and the base reads as both leaf and map pin."
-    images: ["images/mark.svg"]
+    images: ["images/mark.png"]
   - heading: "Logo system"
     body: "Primary lockups in horizontal and stacked forms, on-color variants, and an app-icon treatment — built to stay legible from a garden-bed sign down to a phone home screen."
     images: ["images/logo-system.png"]
   - heading: "Color & pattern"
     body: "A grounded core of greens — #004231, #2c6455, #00b86c — extended by a four-season accent palette and a four-point diamond tessellation drawn straight from the mark."
-    images: ["images/color-story.png", "images/pattern.svg"]
+    images: ["images/color-story.png", "images/pattern.png"]
   - heading: "Type & voice"
     body: "Garden fonts pair a confident grotesque with an editorial serif: \"Nothing worth growing should be forgotten.\" The voice is grounded, rooted, archival, seasonal, cultivated, intentional, blooming."
     images: ["images/type.png", "images/branded-words.png"]
