@@ -3,6 +3,10 @@
 /resources/_gen/
 .hugo_build.lock
 
+# Raw design source files (Illustrator/InDesign/PDF) — kept on disk, not in repo.
+# Curated, web-ready exports live under content/work/<project>/images/.
+2026/
+
 # OS
 .DS_Store
 
