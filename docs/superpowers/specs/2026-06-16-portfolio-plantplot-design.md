@@ -35,10 +35,13 @@ The site chrome stays neutral so each project carries its own color.
 
 - Background: off-white `#FAF9F5`
 - Text: near-black `#111111`; muted `#555555`; hairlines `#E8E6DD`
-- Type: **Object Sans** for the entire site (headings and body), using its
-  weight range for hierarchy (e.g. heavy/bold for headings, regular for body).
-  Object Sans is a PangramPangram face — **not on Google Fonts**, so it is
-  **self-hosted** as `.woff2` in the repo and loaded via `@font-face`.
+- Type: **Open Sans** for the entire site (headings and body), using weights
+  400 / 600 / 800 for hierarchy. (Object Sans was the original pick, but it has
+  no license-clear free webfont — the PangramPangram "free" build is a
+  desktop-only trial, and full copies online are unlicensed redistributions.
+  Open Sans is Apache-2.0, free to embed, and self-hostable.)
+  Self-hosted as `.woff2` (from the open `@fontsource` mirror) and loaded via
+  `@font-face` declared in `head.html` so URLs are baseURL-aware.
   Project-specific typefaces appear only inside case-study figures/specimens
   (e.g. plantplot's own "garden fonts"), never in the site chrome.
 - Generous whitespace, large type, hairline dividers, no gradients/shadows.
@@ -159,12 +162,10 @@ simple expander or as a final section, if completeness is wanted.
 
 ## Fonts (self-hosted)
 
-- **Object Sans** (`.woff2`) placed under `static/fonts/` (or `assets/fonts/`),
-  declared with `@font-face`, with `font-display: swap` and a system-sans
-  fallback stack.
-- Use the **free PangramPangram release** of Object Sans (sourced during build),
-  including at minimum Regular + Heavy (body + headings).
-- Confirm the license permits web embedding before deploy.
+- **Open Sans** (`.woff2`, weights 400/600/800) under `assets/fonts/`, run
+  through Hugo's asset pipeline, declared with `@font-face` in `head.html`
+  (`font-display: swap`, system-sans fallback stack).
+- Apache-2.0 licensed — clear to embed and ship.
 
 ## Open items to confirm during build
 

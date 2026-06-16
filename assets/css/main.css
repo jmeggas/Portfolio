@@ -1,0 +1,14 @@
+:root{
+  --bg:#FAF9F5; --ink:#111; --muted:#555; --hair:#E8E6DD;
+  --maxw:1100px;
+}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Open Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-weight:800;line-height:1.05;letter-spacing:-0.02em;margin:0 0 .4em}
+p{margin:0 0 1em}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}

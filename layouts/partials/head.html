@@ -1,0 +1,12 @@
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+{{ $reg := resources.Get "fonts/open-sans-latin-400-normal.woff2" }}
+{{ $semi := resources.Get "fonts/open-sans-latin-600-normal.woff2" }}
+{{ $heavy := resources.Get "fonts/open-sans-latin-800-normal.woff2" }}
+<style>
+@font-face{font-family:"Open Sans";src:url("{{ $reg.RelPermalink }}") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("{{ $semi.RelPermalink }}") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Open Sans";src:url("{{ $heavy.RelPermalink }}") format("woff2");font-weight:800;font-style:normal;font-display:swap}
+</style>
+<link rel="preload" as="font" type="font/woff2" href="{{ $reg.RelPermalink }}" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="{{ $heavy.RelPermalink }}" crossorigin>
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
