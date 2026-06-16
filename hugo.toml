@@ -1,0 +1,12 @@
+baseURL = "/"
+locale = "en-us"
+title = "Jamie Meggas"
+
+disableKinds = ["taxonomy", "term", "rss"]
+
+[params]
+  role = "Brand & identity designer"
+  email = "jlmeggas@gmail.com"
+
+[markup.goldmark.renderer]
+  unsafe = true
