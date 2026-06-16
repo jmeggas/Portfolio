@@ -35,9 +35,12 @@ The site chrome stays neutral so each project carries its own color.
 
 - Background: off-white `#FAF9F5`
 - Text: near-black `#111111`; muted `#555555`; hairlines `#E8E6DD`
-- Type: a bold geometric/grotesque for headings, clean sans for body
-  (web-safe / Google Fonts; final faces chosen in build — candidates:
-  headings in a heavy grotesque, body in DM Sans to echo plantplot's system)
+- Type: **Object Sans** for the entire site (headings and body), using its
+  weight range for hierarchy (e.g. heavy/bold for headings, regular for body).
+  Object Sans is a PangramPangram face — **not on Google Fonts**, so it is
+  **self-hosted** as `.woff2` in the repo and loaded via `@font-face`.
+  Project-specific typefaces appear only inside case-study figures/specimens
+  (e.g. plantplot's own "garden fonts"), never in the site chrome.
 - Generous whitespace, large type, hairline dividers, no gradients/shadows.
 - Each project page may set an **accent color**; plantplot's is the greens.
 
@@ -154,9 +157,17 @@ simple expander or as a final section, if completeness is wanted.
 - Heavy animation / JS framework
 - Dark mode for the site chrome
 
+## Fonts (self-hosted)
+
+- **Object Sans** (`.woff2`) placed under `static/fonts/` (or `assets/fonts/`),
+  declared with `@font-face`, with `font-display: swap` and a system-sans
+  fallback stack.
+- Source the weights actually used (at minimum Regular + a Bold/Heavy).
+- Confirm the license permits web embedding before deploy.
+
 ## Open items to confirm during build
 
-- Final heading/body typefaces.
+- Which Object Sans weights to include (file size vs. hierarchy).
 - Exact deck pages chosen per section.
 - Whether to include the full-deck gallery.
 - GitHub Pages URL vs. custom domain (affects `baseURL`).
