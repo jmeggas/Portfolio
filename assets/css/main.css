@@ -37,3 +37,28 @@ img{max-width:100%;display:block}
 .card-meta{display:block;padding:16px 18px}
 .card-meta strong{display:block;font-size:1.05rem}
 .card-meta em{color:var(--muted);font-style:normal;font-size:.9rem}
+
+/* case study */
+.cs-hero{background:var(--accent);color:#fff;padding:48px 0 0;overflow:hidden}
+.cs-hero .cs-back{color:rgba(255,255,255,.75);text-decoration:none;font-size:.9rem}
+.cs-hero .cs-back:hover{color:#fff}
+.cs-hero .eyebrow{margin:32px 0 8px;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:rgba(255,255,255,.8)}
+.cs-hero h1{font-size:clamp(2.8rem,9vw,5.6rem);margin:0}
+.cs-hero .cs-tagline{font-size:1.25rem;max-width:40ch;color:rgba(255,255,255,.92);margin:.6em 0 0}
+.cs-hero-img{width:100%;height:auto;margin-top:44px;display:block}
+
+.cs-meta{display:flex;gap:48px;flex-wrap:wrap;padding:32px 24px;border-bottom:1px solid var(--hair)}
+.cs-meta-item span{display:block;color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.cs-meta-item strong{font-weight:600}
+
+.cs-section{padding:64px 24px;border-bottom:1px solid var(--hair)}
+.cs-text{max-width:62ch}
+.cs-text h2{font-size:clamp(1.6rem,4vw,2.4rem)}
+.cs-text p{color:#222;font-size:1.05rem;margin:0}
+.cs-figs{margin-top:32px;display:grid;gap:20px}
+.cs-figs.is-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.fig{width:100%;height:auto;border:1px solid var(--hair);border-radius:12px;background:#fff}
+
+.cs-next{padding:56px 24px 0;font-size:1.15rem}
+.cs-next a{font-weight:800;text-decoration:none}
+.cs-next a:hover{color:var(--accent)}

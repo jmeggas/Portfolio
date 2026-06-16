@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article class="case-study" style="--accent:{{ .Params.accent | default "#103D2E" }}">
+
+  <header class="cs-hero">
+    <div class="wrap">
+      <a class="cs-back" href="{{ "/#work" | relURL }}">&larr; work</a>
+      {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.tagline }}<p class="cs-tagline">{{ . }}</p>{{ end }}
+      {{ with .Params.hero }}{{ $h := $.Resources.GetMatch . }}{{ with $h }}{{ $hi := .Resize "2000x webp q80" }}
+      <img class="cs-hero-img" src="{{ $hi.RelPermalink }}" width="{{ $hi.Width }}" height="{{ $hi.Height }}" alt="{{ $.Title }} identity">{{ end }}{{ end }}
+    </div>
+  </header>
+
+  {{ with .Params.meta }}
+  <div class="wrap cs-meta">
+    {{ range . }}<div class="cs-meta-item"><span>{{ .label }}</span><strong>{{ .value }}</strong></div>{{ end }}
+  </div>
+  {{ end }}
+
+  {{ range .Params.sections }}
+    {{ partial "section.html" (dict "heading" .heading "body" .body "images" .images "page" $) }}
+  {{ end }}
+
+  <nav class="cs-next wrap">
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">Next project: {{ .Title }} &rarr;</a>{{ else }}<a href="{{ "/#work" | relURL }}">&larr; Back to all work</a>{{ end }}
+  </nav>
+
+</article>
+{{ end }}
