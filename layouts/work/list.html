@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="wrap hero">
+  <h1>Work</h1>
+  <p class="lede">Selected brand &amp; identity projects.</p>
+</section>
+<section class="wrap work">
+  <div class="grid">
+    {{ range .Pages }}
+      {{ partial "project-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

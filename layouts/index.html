@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="wrap hero">
+  <h1>Brand &amp; identity designer.</h1>
+  <p class="lede">Logos, systems, and the stories behind them. Selected work below.</p>
+</section>
+<section class="wrap work" id="work">
+  <div class="grid">
+    {{ range where site.RegularPages "Section" "work" }}
+      {{ partial "project-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

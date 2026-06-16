@@ -1,0 +1,70 @@
+:root{
+  --bg:#FAF9F5; --ink:#111; --muted:#555; --hair:#E8E6DD;
+  --maxw:1100px;
+}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Open Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-weight:800;line-height:1.05;letter-spacing:-0.02em;margin:0 0 .4em}
+p{margin:0 0 1em}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* header / footer */
+.site-head{display:flex;justify-content:space-between;align-items:center;padding-top:28px;padding-bottom:28px}
+.site-head .logo{font-weight:800;text-decoration:none;font-size:1.05rem;letter-spacing:-.02em}
+.site-head nav a{margin-left:20px;color:var(--muted);text-decoration:none}
+.site-head nav a:hover{color:var(--ink)}
+.site-foot{border-top:1px solid var(--hair);margin-top:96px;padding:36px 24px;color:var(--muted);font-size:.85rem}
+.site-foot a{text-decoration:none}
+.site-foot a:hover{color:var(--ink)}
+
+/* home hero */
+.hero{padding:72px 24px 48px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem)}
+.hero .lede{color:var(--muted);max-width:36ch;font-size:1.1rem}
+
+/* work grid */
+.work{padding-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
+.card{display:block;text-decoration:none;border:1px solid var(--hair);border-radius:14px;overflow:hidden;background:#fff;transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.card-thumb{display:block;aspect-ratio:16/10;background:var(--accent)}
+.card-thumb img{width:100%;height:100%;object-fit:cover}
+.card-meta{display:block;padding:16px 18px}
+.card-meta strong{display:block;font-size:1.05rem}
+.card-meta em{color:var(--muted);font-style:normal;font-size:.9rem}
+
+/* case study */
+.cs-hero{background:var(--accent);color:#fff;padding:48px 0 0;overflow:hidden}
+.cs-hero .cs-back{color:rgba(255,255,255,.75);text-decoration:none;font-size:.9rem}
+.cs-hero .cs-back:hover{color:#fff}
+.cs-hero .eyebrow{margin:32px 0 8px;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:rgba(255,255,255,.8)}
+.cs-hero h1{font-size:clamp(2.8rem,9vw,5.6rem);margin:0}
+.cs-hero .cs-tagline{font-size:1.25rem;max-width:40ch;color:rgba(255,255,255,.92);margin:.6em 0 0}
+.cs-hero-img{width:100%;height:auto;margin-top:44px;display:block}
+
+.cs-meta{display:flex;gap:48px;flex-wrap:wrap;padding:32px 24px;border-bottom:1px solid var(--hair)}
+.cs-meta-item span{display:block;color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.cs-meta-item strong{font-weight:600}
+
+.cs-section{padding:64px 24px;border-bottom:1px solid var(--hair)}
+.cs-text{max-width:62ch}
+.cs-text h2{font-size:clamp(1.6rem,4vw,2.4rem)}
+.cs-text p{color:#222;font-size:1.05rem;margin:0}
+.cs-figs{margin-top:32px;display:grid;gap:20px}
+.cs-figs.is-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.fig{width:100%;height:auto;border:1px solid var(--hair);border-radius:12px;background:#fff}
+
+.cs-next{padding:56px 24px 0;font-size:1.15rem}
+.cs-next a{font-weight:800;text-decoration:none}
+.cs-next a:hover{color:var(--accent)}
+
+/* simple page (about) */
+.page{padding:64px 24px;max-width:62ch}
+.page h1{font-size:clamp(2.2rem,6vw,3.4rem);margin-bottom:.5em}
+.page p{color:#222;font-size:1.1rem}
+.page a{text-decoration:underline;text-underline-offset:3px}
