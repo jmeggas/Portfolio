@@ -7,13 +7,15 @@
   {{ with .images }}
   <div class="cs-figs{{ if gt (len .) 1 }} is-grid{{ end }}">
     {{ range . }}
-      {{ $res := $page.Resources.GetMatch . }}
+      {{ $src := . }}{{ $alt := $.heading }}
+      {{ if reflect.IsMap . }}{{ $src = .src }}{{ with .alt }}{{ $alt = . }}{{ end }}{{ end }}
+      {{ $res := $page.Resources.GetMatch $src }}
       {{ if $res }}
         {{ if eq $res.MediaType.SubType "svg" }}
-          <img class="fig" src="{{ $res.RelPermalink }}" alt="{{ $.heading }}" loading="lazy">
+          <img class="fig" src="{{ $res.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
         {{ else }}
           {{ $img := $res.Resize "1200x webp q80" }}
-          <img class="fig" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $.heading }}" loading="lazy">
+          <img class="fig" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $alt }}" loading="lazy">
         {{ end }}
       {{ end }}
     {{ end }}

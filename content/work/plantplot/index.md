@@ -22,16 +22,26 @@ sections:
     images: ["images/logo-system.png"]
   - heading: "Color & pattern"
     body: "A grounded core of greens — #004231, #2c6455, #00b86c — extended by a four-season accent palette and a four-point diamond tessellation drawn straight from the mark."
-    images: ["images/color-story.png", "images/pattern.png"]
+    images:
+      - { src: "images/color-story.png", alt: "plantplot color story — core greens and four-season accent palette" }
+      - { src: "images/pattern.png", alt: "Four-point diamond tessellation pattern" }
   - heading: "Type & voice"
     body: "Garden fonts pair a confident grotesque with an editorial serif: \"Nothing worth growing should be forgotten.\" The voice is grounded, rooted, archival, seasonal, cultivated, intentional, blooming."
-    images: ["images/type.png", "images/branded-words.png"]
+    images:
+      - { src: "images/type.png", alt: "Garden fonts type specimen" }
+      - { src: "images/branded-words.png", alt: "Branded words: grounded, rooted, archival, legacy, seasonal, cultivated, intentional, blooming" }
   - heading: "A system for every season"
     body: "Each season gets its own color and message — built for every spring ahead, the season of growth, autumn leaves its mark, and the season of reflection."
-    images: ["images/season-spring.png", "images/season-summer.png", "images/season-fall.png", "images/season-winter.png"]
+    images:
+      - { src: "images/season-spring.png", alt: "Spring — built for every spring ahead" }
+      - { src: "images/season-summer.png", alt: "Summer — the season of growth" }
+      - { src: "images/season-fall.png", alt: "Fall — autumn leaves its mark" }
+      - { src: "images/season-winter.png", alt: "Winter — the season of reflection" }
   - heading: "Applications"
     body: "Identity in use, from the master-gardener business card to a mark that is, by design, full of color."
-    images: ["images/business-card.png", "images/full-of-color.png"]
+    images:
+      - { src: "images/business-card.png", alt: "Business card for Michelle Horton, master gardener" }
+      - { src: "images/full-of-color.png", alt: "The plantplot mark rendered in a full range of colorways" }
   - heading: "Remember what grows"
     body: "Gardens are living records, shaped season by season and rooted in memory. plantplot began with a personal question about how we hold on to fragile things — stories, places, the small details of a life. It imagines design as a way to preserve not just information, but connection: the relationship between people, memory, and the landscapes they care for."
 ---
