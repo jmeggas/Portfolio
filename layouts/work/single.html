@@ -7,8 +7,17 @@
       {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
       <h1>{{ .Title }}</h1>
       {{ with .Params.tagline }}<p class="cs-tagline">{{ . }}</p>{{ end }}
-      {{ with .Params.hero }}{{ $h := $.Resources.GetMatch . }}{{ with $h }}{{ $hi := .Resize "2000x webp q80" }}
-      <img class="cs-hero-img" src="{{ $hi.RelPermalink }}" width="{{ $hi.Width }}" height="{{ $hi.Height }}" alt="{{ $.Title }} identity">{{ end }}{{ end }}
+      {{ $poster := "" }}
+      {{ with .Params.hero }}{{ with ($.Resources.GetMatch .) }}{{ $poster = (.Resize "2000x webp q80").RelPermalink }}{{ end }}{{ end }}
+      {{ with .Params.heroVideo }}
+        {{ with ($.Resources.GetMatch .) }}
+        <video class="cs-hero-img" autoplay muted loop playsinline preload="metadata"{{ with $poster }} poster="{{ . }}"{{ end }}>
+          <source src="{{ .RelPermalink }}" type="video/mp4">
+        </video>
+        {{ end }}
+      {{ else }}
+        {{ with $poster }}<img class="cs-hero-img" src="{{ . }}" alt="{{ $.Title }} identity">{{ end }}
+      {{ end }}
     </div>
   </header>
 
