@@ -12,3 +12,6 @@
 
 # Brainstorm companion (if used)
 .superpowers/
+
+# Design docs / specs / plans — kept local, not in repo
+docs/
