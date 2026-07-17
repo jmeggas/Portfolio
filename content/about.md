@@ -7,4 +7,4 @@ the stories behind them — work that is grounded, intentional, and built to las
 
 Currently open to select projects and collaborations.
 
-Get in touch: [jlmeggas@gmail.com](mailto:jlmeggas@gmail.com)
+Get in touch: [jmeggas42@gmail.com](mailto:jmeggas42@gmail.com)

@@ -6,7 +6,7 @@ disableKinds = ["taxonomy", "term", "rss"]
 
 [params]
   role = "Brand & identity designer"
-  email = "jlmeggas@gmail.com"
+  email = "jmeggas42@gmail.com"
 
 [markup.goldmark.renderer]
   unsafe = true
