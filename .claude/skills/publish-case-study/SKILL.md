@@ -121,6 +121,15 @@ one-alt-per-section reads as duplicates). For an animated hero, add
 `heroVideo: "<file>.mp4"` and keep `hero` as the poster still. Mirror the tone
 and structure of an existing `index.md`.
 
+**House style: no em dashes.** Do not use em dashes (`—`) anywhere in the
+published copy, including section `body` text and image `alt` text. They are the
+one punctuation mark the portfolio deliberately avoids. Rewrite for flow instead:
+a comma or colon for a pause, parentheses for an aside, or two separate
+sentences. Prefer restructuring over a mechanical swap so the line still reads
+naturally. (This rule is about case-study copy, not this skill file.) Quick
+check before committing: `grep -R '—' content/work/<slug>/index.md` should return
+nothing.
+
 ### 6. Build, self-check, then hand the preview to the user
 
 ```bash
@@ -169,6 +178,7 @@ Then confirm the deploy went green and the page is live
 - [ ] Every deck image verified by eye; copy pulled from the deck
 - [ ] Map (slug/accent/hero/thumb/tagline/sections) approved
 - [ ] Images curated with semantic names + per-image alt text
+- [ ] No em dashes in copy or alt text (`grep -R '—' content/work/<slug>` is empty)
 - [ ] `hugo --gc --minify` clean; you verified the page in-browser
 - [ ] **User approved via local preview**
 - [ ] Merged to `main`, pushed, deploy green, live URL confirmed
