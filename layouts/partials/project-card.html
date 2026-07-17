@@ -5,7 +5,7 @@
   {{ else }}{{ $t := .Resize "800x webp q80" }}{{ $thumb = $t.RelPermalink }}{{ $tw = $t.Width }}{{ $th = $t.Height }}{{ end }}
 {{ end }}{{ end }}
 <a class="card" href="{{ .RelPermalink }}" style="--accent:{{ $accent }}">
-  <span class="card-thumb">{{ with $thumb }}<img src="{{ . }}"{{ if $tw }} width="{{ $tw }}" height="{{ $th }}"{{ end }} alt="{{ $.Title }} preview" loading="lazy">{{ end }}</span>
+  <span class="card-thumb">{{ with $thumb }}<img src="{{ . }}"{{ if $tw }} width="{{ $tw }}" height="{{ $th }}"{{ end }} alt="{{ $.Title }} preview" loading="lazy"{{ with $.Params.thumbPosition }} style="object-position:{{ . }}"{{ end }}>{{ end }}</span>
   <span class="card-meta">
     <strong>{{ .Title }}</strong>
     <em>{{ .Params.subtitle }}</em>

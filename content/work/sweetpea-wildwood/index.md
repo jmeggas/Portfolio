@@ -5,6 +5,7 @@ date: 2026-02-01
 accent: "#1e2939"
 eyebrow: "Brand identity · 2026"
 thumb: "images/hero.png"
+thumbPosition: "left"
 hero: "images/hero.png"
 heroVideo: "logo-spin.mp4"
 tagline: "Crafted slowly, held forever."
