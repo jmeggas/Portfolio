@@ -1,8 +1,11 @@
 {{ $accent := .Params.accent | default "#103D2E" }}
-{{ $thumb := "" }}
-{{ with .Params.thumb }}{{ with $.Resources.GetMatch . }}{{ $thumb = .RelPermalink }}{{ end }}{{ end }}
+{{ $thumb := "" }}{{ $tw := 0 }}{{ $th := 0 }}
+{{ with .Params.thumb }}{{ with $.Resources.GetMatch . }}
+  {{ if eq .MediaType.SubType "svg" }}{{ $thumb = .RelPermalink }}
+  {{ else }}{{ $t := .Resize "800x webp q80" }}{{ $thumb = $t.RelPermalink }}{{ $tw = $t.Width }}{{ $th = $t.Height }}{{ end }}
+{{ end }}{{ end }}
 <a class="card" href="{{ .RelPermalink }}" style="--accent:{{ $accent }}">
-  <span class="card-thumb">{{ with $thumb }}<img src="{{ . }}" alt="{{ $.Title }} preview" loading="lazy">{{ end }}</span>
+  <span class="card-thumb">{{ with $thumb }}<img src="{{ . }}"{{ if $tw }} width="{{ $tw }}" height="{{ $th }}"{{ end }} alt="{{ $.Title }} preview" loading="lazy">{{ end }}</span>
   <span class="card-meta">
     <strong>{{ .Title }}</strong>
     <em>{{ .Params.subtitle }}</em>

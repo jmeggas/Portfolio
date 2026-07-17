@@ -57,7 +57,15 @@ img{max-width:100%;display:block}
 .cs-text p{color:#222;font-size:1.05rem;margin:0}
 .cs-figs{margin-top:32px;display:grid;gap:20px}
 .cs-figs.is-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.fig{width:100%;height:auto;border:1px solid var(--hair);border-radius:12px;background:#fff}
+.lightbox-link{display:block;cursor:zoom-in;border-radius:12px;overflow:hidden}
+.fig{width:100%;height:auto;border:1px solid var(--hair);border-radius:12px;background:#fff;transition:opacity .15s ease}
+.lightbox-link:hover .fig{opacity:.9}
+
+/* lightbox overlay */
+.lightbox{position:fixed;inset:0;z-index:1000;background:rgba(17,17,17,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lightbox.is-open{display:flex}
+.lightbox img{max-width:95vw;max-height:92vh;width:auto;height:auto;border-radius:8px}
+.lightbox-close{position:absolute;top:14px;right:22px;background:none;border:none;color:#fff;font-size:2.4rem;line-height:1;cursor:pointer;padding:8px}
 
 .cs-next{padding:56px 24px 0;font-size:1.15rem}
 .cs-next a{font-weight:800;text-decoration:none}

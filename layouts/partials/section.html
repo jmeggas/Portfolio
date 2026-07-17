@@ -12,10 +12,11 @@
       {{ $res := $page.Resources.GetMatch $src }}
       {{ if $res }}
         {{ if eq $res.MediaType.SubType "svg" }}
-          <img class="fig" src="{{ $res.RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+          <a class="lightbox-link" href="{{ $res.RelPermalink }}"><img class="fig" src="{{ $res.RelPermalink }}" alt="{{ $alt }}" loading="lazy"></a>
         {{ else }}
-          {{ $img := $res.Resize "1200x webp q80" }}
-          <img class="fig" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $alt }}" loading="lazy">
+          {{ $thumb := $res.Resize "1000x webp q78" }}
+          {{ $full := $res.Resize "1600x webp q82" }}
+          <a class="lightbox-link" href="{{ $full.RelPermalink }}" aria-label="View larger: {{ $alt }}"><img class="fig" src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $alt }}" loading="lazy"></a>
         {{ end }}
       {{ end }}
     {{ end }}
